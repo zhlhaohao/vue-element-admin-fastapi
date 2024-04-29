@@ -2,4 +2,3 @@
 /logs/celery/*
 *.imi
 .idea
-.vscode

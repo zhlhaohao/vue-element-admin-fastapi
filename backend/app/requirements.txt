@@ -6,7 +6,7 @@ requests
 celery
 passlib
 tenacity
-pydantic
+pydantic==1.10.13
 emails
 raven
 gunicorn
@@ -25,3 +25,4 @@ mysqlclient
 redis
 numpy
 starlette-context
+pandas==1.3.5
