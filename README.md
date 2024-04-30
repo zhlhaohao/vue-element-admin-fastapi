@@ -4,23 +4,26 @@ conda create -n py310-fastapi python=3.10
 conda activate py310-fastapi
 
 sudo apt-get update
-# sudo apt-get install pkg-config
+sudo apt-get install pkg-config
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
 
-cd backend/app
+cd ~/github/vue-element-admin-fastapi/backend/app
 pip install -r requirements.txt
 
-# 准备数据库数据,nuc数据库先创建oo_release库
+# 准备数据库数据,mysql数据库先创建oo_release库
 ./prestart.sh
 
+cd ~/github/vue-element-admin-fastapi/frontend
 npm install --registry=https://registry.npmmirror.com
+
+
+cd ~/github/vue-element-admin-fastapi
 n
+```
 
 后台fastapi的端口11080
 前端的vue端口是9527
-
-
-```
+vscode要做好端口映射
 
 
 # vue-element-admin-fastapi
