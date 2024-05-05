@@ -9,11 +9,10 @@ from app.extensions.utils import send_test_email
 
 router = APIRouter()
 
-
 @router.post("/test-celery/", response_model=schemas.Msg, status_code=201)
 def test_celery(email: schemas.Email,) -> Any:
     """
-    Test Celery worker.
+    api接口，测试Celery worker -- 调用 app.celery_app.worker.example.test_celery 任务
     """
     result = celery_app.send_task("app.celery_app.worker.example.test_celery", args=[email.email])
     # result.get()

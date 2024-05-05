@@ -1,0 +1,5 @@
+POST http://127.0.0.1:11080/utils/test-celery/ HTTP/1.1
+
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTU2MDU2NjgsInN1YiI6IjEifQ.OA7iarvtg1OXNymL8siPM3E9ZZpZfDxyXpFA8KW8OdI
+{"email": "zhlhao@163.com"}

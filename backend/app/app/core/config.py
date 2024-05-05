@@ -52,10 +52,10 @@ class Settings():
     SMTP_TLS: bool = False
     SMTP_PORT: Optional[int] = 587
     SMTP_HOST: Optional[str] = "smtp.qq.com"
-    SMTP_USER: Optional[str] = "619511821@qq.com"
+    SMTP_USER: Optional[str] = "45759490@qq.com"
     SMTP_PASSWORD: Optional[str] = ""
-    EMAILS_FROM_EMAIL: Optional[EmailStr] = "619511821@qq.com"
-    EMAILS_FROM_NAME: Optional[str] = "Mr.Wang"
+    EMAILS_FROM_EMAIL: Optional[EmailStr] = "45759490@qq.com"
+    EMAILS_FROM_NAME: Optional[str] = "Mr.Hao"
 
     # # @validator("EMAILS_FROM_NAME")
     # def get_project_name(cls, v: Optional[str], values: Dict[str, Any]) -> str:
@@ -64,7 +64,7 @@ class Settings():
     #     return v
     #
     # EMAIL_RESET_TOKEN_EXPIRE_HOURS: int = 48
-    EMAIL_TEMPLATES_DIR: str = "app/email-templates/build"
+    EMAIL_TEMPLATES_DIR: str = "/home/lianghao/github/vue-element-admin-fastapi/backend/app/app/email-templates/build"
     EMAILS_ENABLED: bool = True
 
     #
@@ -73,7 +73,7 @@ class Settings():
         return bool(values.get("SMTP_HOST") and values.get("SMTP_PORT") and values.get("EMAILS_FROM_EMAIL"))
 
     FIRST_SUPERUSER: str = "admin"
-    FIRST_SUPERUSER_EMAIL: str = "619511821@qq.com"
+    FIRST_SUPERUSER_EMAIL: str = "45759490@qq.com"
     FIRST_SUPERUSER_PASSWORD: str = "qwe123"
     USERS_OPEN_REGISTRATION: bool = False
 

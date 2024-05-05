@@ -7,20 +7,26 @@ sudo apt-get update
 # sudo apt-get install pkg-config
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
 
-cd backend/app
+cd ~/github/vue-element-admin-fastapi/backend/app
 pip install -r requirements.txt
 
 # 准备数据库数据,nuc数据库先创建oo_release库
 ./prestart.sh
 
+
+cd ~/github/vue-element-admin-fastapi/frontend
 npm install --registry=https://registry.npmmirror.com
 n
 
+
+# 设置本项目的git代理
+git config --local http.proxy 192.168.50.150:7890 
+```
+
+
 后台fastapi的端口11080
 前端的vue端口是9527
-
-
-```
+http://loaclhost:9527
 
 
 # vue-element-admin-fastapi
@@ -86,11 +92,13 @@ backend:python-socketio
 前端：socket.io-client version 3.X  
 后端：python-socketio  version 5.X  
 
-#### celery
-celery-redis  
-start celery:sh backend\app\worker-start.sh   
-#### middleware
+#### 启动celery worker
+cd /home/lianghao/github/vue-element-admin-fastapi/backend/app
+./worker-start.sh   
 
+
+
+http://localhost:11080/test-celery/
 
 #### EXCEL敏捷开发
 axios发送get请求携带token,通过访问header['content-disposition']获取文件名(需要后端设置Access-Control-Expose-Headers)

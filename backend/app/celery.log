@@ -1,0 +1,35 @@
+ 
+ -------------- celery@NUC v5.4.0 (opalescent)
+--- ***** ----- 
+-- ******* ---- Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.31 2024-05-05 18:31:54
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         worker:0x7f91ffd53580
+- ** ---------- .> transport:   redis://:**@127.0.0.1:6379/1
+- ** ---------- .> results:     redis://:**@127.0.0.1:6379/0
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> example-queue    exchange=example-queue(direct) key=example-queue
+                
+
+[tasks]
+  . app.celery_app.worker.example.test_celery
+
+[2024-05-05 18:31:54,750: WARNING/MainProcess] /home/lianghao/miniconda3/envs/py310-fastapi/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-05-05 18:31:54,760: INFO/MainProcess] Connected to redis://:**@127.0.0.1:6379/1
+[2024-05-05 18:31:54,761: WARNING/MainProcess] /home/lianghao/miniconda3/envs/py310-fastapi/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-05-05 18:31:54,765: INFO/MainProcess] mingle: searching for neighbors
+[2024-05-05 18:31:55,787: INFO/MainProcess] mingle: all alone
+[2024-05-05 18:31:55,833: INFO/MainProcess] celery@NUC ready.
