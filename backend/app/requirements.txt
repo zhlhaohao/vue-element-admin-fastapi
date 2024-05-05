@@ -20,7 +20,7 @@ aiofiles
 openpyxl
 python-socketio
 psutil
-bcrypt
+bcrypt==3.2.2
 mysqlclient
 redis
 numpy
